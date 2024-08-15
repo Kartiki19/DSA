@@ -1,0 +1,317 @@
+In file included from main_1.cpp:1:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:263:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/operations.h:490:21: error: invalid operands to binary expression ('const std::pair<int, Request>' and 'const std::pair<int, Request>')
+        {return __x > __y;}
+                ~~~ ^ ~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/push_heap.h:40:9: note: in instantiation of member function 'std::greater<std::pair<int, Request>>::operator()' requested here
+    if (__comp(*__ptr, *--__last)) {
+        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/push_heap.h:60:8: note: in instantiation of function template specialization 'std::__sift_up<std::_ClassicAlgPolicy, std::greater<std::pair<int, Request>> &, std::__wrap_iter<std::pair<int, Request> *>>' requested here
+  std::__sift_up<_AlgPolicy, __comp_ref_type<_Compare> >(std::move(__first), std::move(__last), __comp, __len);
+       ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/push_heap.h:69:8: note: in instantiation of function template specialization 'std::__push_heap<std::_ClassicAlgPolicy, std::__wrap_iter<std::pair<int, Request> *>, std::greater<std::pair<int, Request>>>' requested here
+  std::__push_heap<_ClassicAlgPolicy>(std::move(__first), std::move(__last), __comp);
+       ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:1075:12: note: in instantiation of function template specialization 'std::push_heap<std::__wrap_iter<std::pair<int, Request> *>, std::greater<std::pair<int, Request>>>' requested here
+    _VSTD::push_heap(c.begin(), c.end(), comp);
+           ^
+main_1.cpp:54:25: note: in instantiation of member function 'std::priority_queue<std::pair<int, Request>, std::vector<std::pair<int, Request>>, std::greater<std::pair<int, Request>>>::push' requested here
+                upQueue.push({request.getSourceFloor(), request});
+                        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__variant/monostate.h:32:49: note: candidate function not viable: no known conversion from 'const std::pair<int, Request>' to 'monostate' for 1st argument
+_LIBCPP_HIDE_FROM_ABI constexpr strong_ordering operator<=>(monostate, monostate) noexcept {
+                                                ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_condition.h:115:1: note: candidate function not viable: no known conversion from 'const std::pair<int, Request>' to 'const error_condition' for 1st argument
+operator<=>(const error_condition& __x, const error_condition& __y) noexcept {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_code.h:128:46: note: candidate function not viable: no known conversion from 'const std::pair<int, Request>' to 'const error_code' for 1st argument
+inline _LIBCPP_HIDE_FROM_ABI strong_ordering operator<=>(const error_code& __x, const error_code& __y) noexcept {
+                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/id.h:101:46: note: candidate function not viable: no known conversion from 'const std::pair<int, Request>' to '__thread_id' for 1st argument
+inline _LIBCPP_HIDE_FROM_ABI strong_ordering operator<=>(__thread_id __x, __thread_id __y) noexcept {
+                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:623:1: note: candidate template ignored: substitution failure [with _T1 = int, _T2 = Request, _U1 = int, _U2 = Request]: no matching function for call to '__synth_three_way'
+operator<=>(const pair<_T1,_T2>& __x, const pair<_U1,_U2>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:623:1: note: candidate template ignored: substitution failure [with _T1 = int, _T2 = Request, _U1 = int, _U2 = Request]: no matching function for call to '__synth_three_way'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:248:1: note: candidate template ignored: could not match 'reverse_iterator' against 'pair'
+operator>(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:288:1: note: candidate template ignored: could not match 'reverse_iterator' against 'pair'
+operator<=>(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:288:1: note: candidate template ignored: could not match 'reverse_iterator' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:549:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator> (const unique_ptr<_T1, _D1>& __x, const unique_ptr<_T2, _D2>& __y) {return __y < __x;}
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:569:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator<=>(const unique_ptr<_T1, _D1>& __x, const unique_ptr<_T2, _D2>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:569:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:622:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator>(const unique_ptr<_T1, _D1>& __x, nullptr_t) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:628:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator>(nullptr_t, const unique_ptr<_T1, _D1>& __x) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:661:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator<=>(const unique_ptr<_T1, _D1>& __x, nullptr_t) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:661:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/tuple:1587:1: note: candidate template ignored: could not match 'tuple' against 'pair'
+operator<=>(const tuple<_Tp...>& __x, const tuple<_Up...>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/tuple:1587:1: note: candidate template ignored: could not match 'tuple' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_iterator.h:278:6: note: candidate template ignored: could not match 'move_iterator' against 'pair'
+bool operator>(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_iterator.h:300:6: note: candidate template ignored: could not match 'move_iterator' against 'pair'
+auto operator<=>(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_iterator.h:300:6: note: candidate template ignored: could not match 'move_iterator' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque:2939:1: note: candidate template ignored: could not match 'deque' against 'pair'
+operator<=>(const deque<_Tp, _Allocator>& __x, const deque<_Tp, _Allocator>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:151:6: note: candidate template ignored: could not match '__wrap_iter' against 'pair'
+bool operator>(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter1>& __y) _NOEXCEPT
+     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:158:6: note: candidate template ignored: could not match '__wrap_iter' against 'pair'
+bool operator>(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT
+     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/variant:1663:1: note: candidate template ignored: could not match 'variant' against 'pair'
+operator<=>(const variant<_Types...>& __lhs, const variant<_Types...>& __rhs) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/variant:1705:16: note: candidate template ignored: could not match 'variant' against 'pair'
+constexpr bool operator>(const variant<_Types...>& __lhs,
+               ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:1403:1: note: candidate template ignored: could not match 'shared_ptr' against 'pair'
+operator<=>(shared_ptr<_Tp> const& __x, shared_ptr<_Up> const& __y) noexcept
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:1403:1: note: candidate template ignored: could not match 'shared_ptr' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:1512:1: note: candidate template ignored: could not match 'shared_ptr' against 'pair'
+operator<=>(shared_ptr<_Tp> const& __x, nullptr_t) noexcept
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:1512:1: note: candidate template ignored: could not match 'shared_ptr' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/array:440:1: note: candidate template ignored: could not match 'array' against 'pair'
+operator<=>(const array<_Tp, _Size>& __x, const array<_Tp, _Size>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1305:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator>(const optional<_Tp>& __x, const optional<_Up>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1350:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator<=>(const optional<_Tp>& __x, const optional<_Up>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1350:1: note: candidate template ignored: could not match 'optional' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1460:49: note: candidate template ignored: could not match 'optional' against 'pair'
+_LIBCPP_HIDE_FROM_ABI constexpr strong_ordering operator<=>(const optional<_Tp>& __x, nullopt_t) noexcept {
+                                                ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1460:49: note: candidate template ignored: could not match 'optional' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1570:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator>(const optional<_Tp>& __x, const _Up& __v)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1582:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator>(const _Tp& __v, const optional<_Up>& __x)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1616:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator<=>(const optional<_Tp>& __x, const _Up& __v) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1616:1: note: candidate template ignored: could not match 'optional' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string_view:818:1: note: candidate template ignored: could not match 'basic_string_view' against 'pair'
+operator<=>(basic_string_view<_CharT, _Traits> __lhs, basic_string_view<_CharT, _Traits> __rhs) noexcept {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string_view:831:38: note: candidate template ignored: could not match 'basic_string_view' against 'pair'
+_LIBCPP_HIDE_FROM_ABI constexpr auto operator<=>(
+                                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string_view:831:38: note: candidate template ignored: could not match 'basic_string_view' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:3945:38: note: candidate template ignored: could not match 'basic_string' against 'pair'
+_LIBCPP_HIDE_FROM_ABI constexpr auto operator<=>(
+                                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:3953:1: note: candidate template ignored: could not match 'basic_string' against 'pair'
+operator<=>(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* __rhs) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:3953:1: note: candidate template ignored: could not match 'basic_string' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:3376:1: note: candidate template ignored: could not match 'vector' against 'pair'
+operator<=>(const vector<_Tp, _Allocator>& __x, const vector<_Tp, _Allocator>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:536:1: note: candidate template ignored: could not match 'queue' against 'pair'
+operator> (const queue<_Tp, _Container>& __x,const queue<_Tp, _Container>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:561:1: note: candidate template ignored: could not match 'queue' against 'pair'
+operator<=>(const queue<_Tp, _Container>& __x, const queue<_Tp, _Container>& __y) {
+^
+In file included from main_1.cpp:1:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:263:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/operations.h:403:21: error: invalid operands to binary expression ('const std::pair<int, Request>' and 'const std::pair<int, Request>')
+        {return __x < __y;}
+                ~~~ ^ ~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/push_heap.h:40:9: note: in instantiation of member function 'std::less<std::pair<int, Request>>::operator()' requested here
+    if (__comp(*__ptr, *--__last)) {
+        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/push_heap.h:60:8: note: in instantiation of function template specialization 'std::__sift_up<std::_ClassicAlgPolicy, std::less<std::pair<int, Request>> &, std::__wrap_iter<std::pair<int, Request> *>>' requested here
+  std::__sift_up<_AlgPolicy, __comp_ref_type<_Compare> >(std::move(__first), std::move(__last), __comp, __len);
+       ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/push_heap.h:69:8: note: in instantiation of function template specialization 'std::__push_heap<std::_ClassicAlgPolicy, std::__wrap_iter<std::pair<int, Request> *>, std::less<std::pair<int, Request>>>' requested here
+  std::__push_heap<_ClassicAlgPolicy>(std::move(__first), std::move(__last), __comp);
+       ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:1075:12: note: in instantiation of function template specialization 'std::push_heap<std::__wrap_iter<std::pair<int, Request> *>, std::less<std::pair<int, Request>>>' requested here
+    _VSTD::push_heap(c.begin(), c.end(), comp);
+           ^
+main_1.cpp:56:27: note: in instantiation of member function 'std::priority_queue<std::pair<int, Request>>::push' requested here
+                downQueue.push({request.getSourceFloor(), request});
+                          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__variant/monostate.h:32:49: note: candidate function not viable: no known conversion from 'const std::pair<int, Request>' to 'monostate' for 1st argument
+_LIBCPP_HIDE_FROM_ABI constexpr strong_ordering operator<=>(monostate, monostate) noexcept {
+                                                ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_condition.h:115:1: note: candidate function not viable: no known conversion from 'const std::pair<int, Request>' to 'const error_condition' for 1st argument
+operator<=>(const error_condition& __x, const error_condition& __y) noexcept {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_code.h:128:46: note: candidate function not viable: no known conversion from 'const std::pair<int, Request>' to 'const error_code' for 1st argument
+inline _LIBCPP_HIDE_FROM_ABI strong_ordering operator<=>(const error_code& __x, const error_code& __y) noexcept {
+                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/id.h:101:46: note: candidate function not viable: no known conversion from 'const std::pair<int, Request>' to '__thread_id' for 1st argument
+inline _LIBCPP_HIDE_FROM_ABI strong_ordering operator<=>(__thread_id __x, __thread_id __y) noexcept {
+                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:623:1: note: candidate template ignored: substitution failure [with _T1 = int, _T2 = Request, _U1 = int, _U2 = Request]: no matching function for call to '__synth_three_way'
+operator<=>(const pair<_T1,_T2>& __x, const pair<_U1,_U2>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:623:1: note: candidate template ignored: substitution failure [with _T1 = int, _T2 = Request, _U1 = int, _U2 = Request]: no matching function for call to '__synth_three_way'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:222:1: note: candidate template ignored: could not match 'reverse_iterator' against 'pair'
+operator<(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:288:1: note: candidate template ignored: could not match 'reverse_iterator' against 'pair'
+operator<=>(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:288:1: note: candidate template ignored: could not match 'reverse_iterator' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:538:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator< (const unique_ptr<_T1, _D1>& __x, const unique_ptr<_T2, _D2>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:569:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator<=>(const unique_ptr<_T1, _D1>& __x, const unique_ptr<_T2, _D2>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:569:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:608:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator<(const unique_ptr<_T1, _D1>& __x, nullptr_t) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:615:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator<(nullptr_t, const unique_ptr<_T1, _D1>& __x) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:661:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+operator<=>(const unique_ptr<_T1, _D1>& __x, nullptr_t) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/unique_ptr.h:661:1: note: candidate template ignored: could not match 'unique_ptr' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/tuple:1587:1: note: candidate template ignored: could not match 'tuple' against 'pair'
+operator<=>(const tuple<_Tp...>& __x, const tuple<_Up...>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/tuple:1587:1: note: candidate template ignored: could not match 'tuple' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_iterator.h:271:6: note: candidate template ignored: could not match 'move_iterator' against 'pair'
+bool operator<(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_iterator.h:300:6: note: candidate template ignored: could not match 'move_iterator' against 'pair'
+auto operator<=>(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_iterator.h:300:6: note: candidate template ignored: could not match 'move_iterator' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque:2939:1: note: candidate template ignored: could not match 'deque' against 'pair'
+operator<=>(const deque<_Tp, _Allocator>& __x, const deque<_Tp, _Allocator>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:123:6: note: candidate template ignored: could not match '__wrap_iter' against 'pair'
+bool operator<(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter1>& __y) _NOEXCEPT
+     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:130:6: note: candidate template ignored: could not match '__wrap_iter' against 'pair'
+bool operator<(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT
+     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/variant:1663:1: note: candidate template ignored: could not match 'variant' against 'pair'
+operator<=>(const variant<_Types...>& __lhs, const variant<_Types...>& __rhs) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/variant:1693:16: note: candidate template ignored: could not match 'variant' against 'pair'
+constexpr bool operator<(const variant<_Types...>& __lhs,
+               ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:1403:1: note: candidate template ignored: could not match 'shared_ptr' against 'pair'
+operator<=>(shared_ptr<_Tp> const& __x, shared_ptr<_Up> const& __y) noexcept
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:1403:1: note: candidate template ignored: could not match 'shared_ptr' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:1512:1: note: candidate template ignored: could not match 'shared_ptr' against 'pair'
+operator<=>(shared_ptr<_Tp> const& __x, nullptr_t) noexcept
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:1512:1: note: candidate template ignored: could not match 'shared_ptr' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/array:440:1: note: candidate template ignored: could not match 'array' against 'pair'
+operator<=>(const array<_Tp, _Size>& __x, const array<_Tp, _Size>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1289:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator<(const optional<_Tp>& __x, const optional<_Up>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1350:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator<=>(const optional<_Tp>& __x, const optional<_Up>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1350:1: note: candidate template ignored: could not match 'optional' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1460:49: note: candidate template ignored: could not match 'optional' against 'pair'
+_LIBCPP_HIDE_FROM_ABI constexpr strong_ordering operator<=>(const optional<_Tp>& __x, nullopt_t) noexcept {
+                                                ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1460:49: note: candidate template ignored: could not match 'optional' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1522:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator<(const optional<_Tp>& __x, const _Up& __v)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1534:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator<(const _Tp& __v, const optional<_Up>& __x)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1616:1: note: candidate template ignored: could not match 'optional' against 'pair'
+operator<=>(const optional<_Tp>& __x, const _Up& __v) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:1616:1: note: candidate template ignored: could not match 'optional' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string_view:818:1: note: candidate template ignored: could not match 'basic_string_view' against 'pair'
+operator<=>(basic_string_view<_CharT, _Traits> __lhs, basic_string_view<_CharT, _Traits> __rhs) noexcept {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string_view:831:38: note: candidate template ignored: could not match 'basic_string_view' against 'pair'
+_LIBCPP_HIDE_FROM_ABI constexpr auto operator<=>(
+                                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string_view:831:38: note: candidate template ignored: could not match 'basic_string_view' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:3945:38: note: candidate template ignored: could not match 'basic_string' against 'pair'
+_LIBCPP_HIDE_FROM_ABI constexpr auto operator<=>(
+                                     ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:3953:1: note: candidate template ignored: could not match 'basic_string' against 'pair'
+operator<=>(const basic_string<_CharT, _Traits, _Allocator>& __lhs, const _CharT* __rhs) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/string:3953:1: note: candidate template ignored: could not match 'basic_string' against 'pair'
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector:3376:1: note: candidate template ignored: could not match 'vector' against 'pair'
+operator<=>(const vector<_Tp, _Allocator>& __x, const vector<_Tp, _Allocator>& __y) {
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:520:1: note: candidate template ignored: could not match 'queue' against 'pair'
+operator< (const queue<_Tp, _Container>& __x,const queue<_Tp, _Container>& __y)
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:561:1: note: candidate template ignored: could not match 'queue' against 'pair'
+operator<=>(const queue<_Tp, _Container>& __x, const queue<_Tp, _Container>& __y) {
+^
+In file included from main_1.cpp:1:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:258:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:53:7: error: no matching function for call to '__sift_up'
+      std::__sift_up<_AlgPolicy>(__first, __hole, __comp_ref, __hole - __first);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:65:8: note: in instantiation of function template specialization 'std::__pop_heap<std::_ClassicAlgPolicy, std::greater<std::pair<int, Request>>, std::__wrap_iter<std::pair<int, Request> *>>' requested here
+  std::__pop_heap<_ClassicAlgPolicy>(std::move(__first), std::move(__last), __comp, __len);
+       ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:1095:12: note: in instantiation of function template specialization 'std::pop_heap<std::__wrap_iter<std::pair<int, Request> *>, std::greater<std::pair<int, Request>>>' requested here
+    _VSTD::pop_heap(c.begin(), c.end(), comp);
+           ^
+main_1.cpp:82:25: note: in instantiation of member function 'std::priority_queue<std::pair<int, Request>, std::vector<std::pair<int, Request>>, std::greater<std::pair<int, Request>>>::pop' requested here
+                upQueue.pop();
+                        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/push_heap.h:32:6: note: candidate template ignored: substitution failure [with _AlgPolicy = std::_ClassicAlgPolicy, _Compare = std::greater<std::pair<int, Request>> &, _RandomAccessIterator = std::__wrap_iter<std::pair<int, Request> *>]
+void __sift_up(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare&& __comp,
+     ^
+In file included from main_1.cpp:1:
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:258:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:53:7: error: no matching function for call to '__sift_up'
+      std::__sift_up<_AlgPolicy>(__first, __hole, __comp_ref, __hole - __first);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/pop_heap.h:65:8: note: in instantiation of function template specialization 'std::__pop_heap<std::_ClassicAlgPolicy, std::less<std::pair<int, Request>>, std::__wrap_iter<std::pair<int, Request> *>>' requested here
+  std::__pop_heap<_ClassicAlgPolicy>(std::move(__first), std::move(__last), __comp, __len);
+       ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue:1095:12: note: in instantiation of function template specialization 'std::pop_heap<std::__wrap_iter<std::pair<int, Request> *>, std::less<std::pair<int, Request>>>' requested here
+    _VSTD::pop_heap(c.begin(), c.end(), comp);
+           ^
+main_1.cpp:97:27: note: in instantiation of member function 'std::priority_queue<std::pair<int, Request>>::pop' requested here
+                downQueue.pop();
+                          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/push_heap.h:32:6: note: candidate template ignored: substitution failure [with _AlgPolicy = std::_ClassicAlgPolicy, _Compare = std::less<std::pair<int, Request>> &, _RandomAccessIterator = std::__wrap_iter<std::pair<int, Request> *>]
+void __sift_up(_RandomAccessIterator __first, _RandomAccessIterator __last, _Compare&& __comp,
+     ^
+4 errors generated.
